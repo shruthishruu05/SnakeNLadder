@@ -2,20 +2,22 @@ package com.bridgelabz.snakeandladder;
 
 public class snakeandladder {
 
-	public static final int NOPLAY=0;
+	public static final int NO_PLAY=0;
 	public static final int LADDER=1;
 	public static final int SNAKE=2;
 	public static void main(String[] args) {
 		System.out.println("Welcome ");
 		System.out.println("The Player Starts at Position 0");
 		int numberOnDie=0,currentPosition=0;
+		int count=0;
 		while(currentPosition<100)
 		{
 			numberOnDie=(int)((Math.random()*100)%6)+1;
-			System.out.println("The Number on the Die is "+numberOnDie);
+			count=count+1;
+			System.out.println("The Number on the Die: "+numberOnDie);
 			int option=(int)(Math.random()*100)%3;
 			switch(option) {
-				case NOPLAY:
+				case NO_PLAY:
 					System.out.println("The Option is No Play");
 					break;
 				case LADDER:
@@ -36,7 +38,8 @@ public class snakeandladder {
 			}
 			System.out.println("The Current Position "+currentPosition);
 		}
-		System.out.println("The Player reached the Winning position");
+		System.out.println("The Player has reached the Winning position");
+		System.out.println("The number of times the die was being played : "+count);
 		
 		
 
@@ -44,4 +47,3 @@ public class snakeandladder {
 		
 		
 }
-
