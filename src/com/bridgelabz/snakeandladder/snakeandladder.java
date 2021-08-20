@@ -16,7 +16,7 @@ public class snakeandladder {
 		{
 			if(player1_Turn)
 			{
-				System.out.println("Player 1's Turn");
+				System.out.println("Player 1's Turn.");
 				player1_Turn=false;
 				numberOnDie=(int)((Math.random()*100)%6)+1;
 				
